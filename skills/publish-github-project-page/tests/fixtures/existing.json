@@ -1,0 +1,16 @@
+{
+  "profile": {"login": "demo", "name": "Demo", "bio": "Build useful things", "avatar_url": "", "html_url": "https://github.com/demo"},
+  "site": {"title": "Demo Projects", "language": "zh-CN", "theme_color": "#77543d", "categories": ["工作提效"]},
+  "projects": [
+    {
+      "repo": "demo/tool",
+      "url": "https://github.com/demo/tool",
+      "visibility": "public",
+      "fingerprint": "old",
+      "generated": {"name": "Tool", "value": "旧的 AI 建议", "production_value": "减少重复操作", "category": "工作提效", "technologies": ["Python"]},
+      "approved": {"name": "Tool", "value": "人工确认价值", "production_value": "人工确认投产价值", "category": "工作提效", "technologies": ["Python"]},
+      "evidence": ["README: automates repetitive work"],
+      "confidence": "high"
+    }
+  ]
+}

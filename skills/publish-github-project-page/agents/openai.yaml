@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish GitHub Project Page"
+  short_description: "Turn public GitHub projects into a reviewed Pages site"
+  default_prompt: "Use $publish-github-project-page to generate or update my public GitHub project page."
