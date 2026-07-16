@@ -17,7 +17,7 @@ Create a trustworthy static project notebook from public GitHub evidence. Keep t
 6. Draft the canonical data described in [references/project-data.md](references/project-data.md). Propose user-supplied categories first; otherwise infer a small category set. Write qualitative production value only. Attach evidence and confidence to every project.
 7. If prior `projects.json` exists, run the merge command. Treat `approved` as authoritative; updated `generated` content is only a suggestion.
 8. Present the complete repository list, categories, value copy, and production value for one content confirmation. Put confirmed copy into `approved`.
-9. Run `validate`, then `render` with `assets/site-template/`. Fix validation errors before continuing.
+9. Offer one visual choice: `site-template` for the quiet notebook or `site-template-prism` for an iridescent, animated portfolio. Use the prism template when the user asks for cool, premium, playful, fluid, or highly visual styling. Run `validate`, then `render` with the chosen template. Fix validation errors before continuing.
 10. Detect whether `<login>.github.io` already exists. If absent, propose it; otherwise propose a conflict-free project repository such as `github-project-page`. Never overwrite an unrelated Pages site.
 11. List the destination repository, branch, files, Pages setting, and every remote write.
 12. Ask for explicit publication confirmation. Only then create/update the repository, enable Pages, check deployment status, and report the URL.
@@ -36,6 +36,8 @@ Set `SKILL_DIR` to this Skill folder.
 python3 "$SKILL_DIR/scripts/project_page.py" validate --data projects.json
 python3 "$SKILL_DIR/scripts/project_page.py" merge --existing old.json --incoming draft.json --output projects.json
 python3 "$SKILL_DIR/scripts/project_page.py" render --data projects.json --template "$SKILL_DIR/assets/site-template" --output site
+# Iridescent alternative:
+python3 "$SKILL_DIR/scripts/project_page.py" render --data projects.json --template "$SKILL_DIR/assets/site-template-prism" --output site
 ```
 
 ## Failure handling

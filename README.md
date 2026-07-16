@@ -10,7 +10,7 @@
 - 根据项目描述、README 和必要代码理解项目价值；
 - 生成项目名称、一句话价值和投产价值；
 - 自动建议分类，也允许每位用户定义自己的分类体系；
-- 生成笔记本标签式导航和项目卡片；
+- 提供安静的笔记本与流光棱镜两种模板，均支持分类筛选和项目卡片；
 - 发布到 GitHub Pages，不依赖额外后端；
 - 增量更新项目，同时保留用户人工确认过的文案。
 
@@ -51,7 +51,8 @@ skills/publish-github-project-page/
 ├── agents/openai.yaml
 ├── scripts/project_page.py
 ├── references/project-data.md
-├── assets/site-template/
+├── assets/site-template/          # 笔记本风格
+├── assets/site-template-prism/    # 流光棱镜风格
 └── tests/
 ```
 

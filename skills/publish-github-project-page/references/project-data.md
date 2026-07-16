@@ -15,6 +15,11 @@ Use UTF-8 JSON with these top-level keys:
     "title": "Project Notebook",
     "language": "zh-CN",
     "theme_color": "#77543d",
+    "brand_name": "MY IDEAS",
+    "hero_copy": "Turn curiosity into working products.",
+    "project_intro": "A record of ideas becoming real products.",
+    "about_lines": ["A curious AI product manager.", "Keep building and evolving."],
+    "interests": ["film", "photography", "music"],
     "categories": ["工作提效"]
   },
   "projects": [
@@ -49,6 +54,8 @@ Use UTF-8 JSON with these top-level keys:
 - Evidence must be a short paraphrase with its source location, not copied documentation.
 - Do not state money, percentages, time savings, user counts, or multipliers without explicit repository or user evidence.
 - Keep categories user-defined. When none are supplied, infer the smallest useful set and request confirmation.
+- `brand_name`, `hero_copy`, `project_intro`, `about_lines`, and `interests` are optional identity fields used by the prism template. Omit them to use profile-based defaults.
+- `visual` is an optional project-level value: `agent`, `resume`, `diary`, `showcase`, or `prism`. The prism template cycles defaults when it is absent.
 
 ## Fingerprints
 

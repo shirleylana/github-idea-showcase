@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A visual collection of GitHub projects">
+  <title>GitHub Ideas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <section class="intro" id="intro" aria-label="开场动画">
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="prism">
+      <div class="intro-copy">
+        <p class="eyebrow" id="intro-kicker">GitHub presents</p>
+        <h1 id="intro-title">IDEAS</h1>
+        <button class="start" id="start" type="button">Press start <span>↗</span></button>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" id="brand" href="#top">MY IDEAS</a>
+    <div class="nav-links">
+      <a class="active" href="#work">PROJECTS</a>
+      <a href="#about">ABOUT</a>
+      <a id="github-link" href="#" target="_blank" rel="noreferrer">GITHUB ↗</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-orb" aria-hidden="true"></div>
+    <div class="micro"><span>AI PRODUCT BUILDER</span><span>CURIOSITY IN PROGRESS · 2026</span></div>
+    <h1 class="headline"><span>IDEAS</span><span class="outline">BECOME</span><span class="gradient">REAL.</span></h1>
+    <div class="hero-bottom">
+      <p id="hero-copy">把好奇心变成可以运行的产品。</p>
+      <a class="scroll" href="#work">Scroll to explore</a>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true"><div>AI PRODUCT · PROMPT ENGINEERING · AGENT WORKFLOW · REAL IMPACT · LIFE HACKS · AI PRODUCT · PROMPT ENGINEERING · AGENT WORKFLOW · REAL IMPACT · LIFE HACKS ·&nbsp;</div></div>
+
+  <main class="work" id="work">
+    <div class="section-head">
+      <h2>SELECTED<br>EXPERIMENTS</h2>
+      <p id="project-intro">想法变成真实产品的过程记录。每张卡片展示它解决什么，以及为什么值得投入使用。</p>
+    </div>
+    <div class="filter-row">
+      <div class="filters" id="category-filters" role="tablist" aria-label="项目分类"></div>
+      <p class="project-count" id="project-count" aria-live="polite"></p>
+    </div>
+    <div class="grid" id="project-grid"></div>
+    <p class="empty-state" id="empty-state" hidden>这个分类的实验还在酝酿中。</p>
+  </main>
+
+  <section class="about" id="about">
+    <p class="about-label">// ABOUT SHIRLEY</p>
+    <div>
+      <blockquote id="about-copy"><p><strong>保持好奇，持续搭建、验证和进化。</strong></p></blockquote>
+      <a class="about-link" id="about-link" href="#" target="_blank" rel="noreferrer">Follow the experiments on GitHub ↗</a>
+    </div>
+  </section>
+
+  <footer class="footer"><span id="copyright">© 2026</span><span>BUILT FROM PUBLIC GITHUB EVIDENCE</span></footer>
+</body>
+</html>

@@ -10,6 +10,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = Path(__file__).parent / "fixtures"
 TEMPLATE_DIR = ROOT / "assets" / "site-template"
+PRISM_TEMPLATE_DIR = ROOT / "assets" / "site-template-prism"
 
 
 def load_module():
@@ -72,6 +73,16 @@ class ProjectPageTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "must be public"):
                 project_page.render_site(data, TEMPLATE_DIR, Path(tmp))
             self.assertEqual(list(Path(tmp).iterdir()), [])
+
+    def test_prism_template_is_renderable_and_has_real_filtering(self):
+        project_page = load_module()
+        with tempfile.TemporaryDirectory() as tmp:
+            project_page.render_site(fixture("incoming.json"), PRISM_TEMPLATE_DIR, Path(tmp))
+            html = Path(tmp, "index.html").read_text()
+            app = Path(tmp, "app.js").read_text()
+            self.assertIn('class="intro"', html)
+            self.assertIn("function filterProjects", app)
+            self.assertIn("module.exports = { filterProjects }", app)
 
 
 if __name__ == "__main__":
