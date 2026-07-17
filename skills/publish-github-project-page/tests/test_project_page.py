@@ -84,6 +84,12 @@ class ProjectPageTests(unittest.TestCase):
             self.assertIn("function filterProjects", app)
             self.assertIn("module.exports = { filterProjects }", app)
 
+    def test_prism_interests_inherit_about_typography(self):
+        css = (PRISM_TEMPLATE_DIR / "styles.css").read_text()
+        rule = css.split(".about .about-interests{", 1)[1].split("}", 1)[0]
+        for property_name in ("font-size", "color", "font-weight", "letter-spacing"):
+            self.assertNotIn(property_name, rule)
+
 
 if __name__ == "__main__":
     unittest.main()
